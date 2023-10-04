@@ -1,0 +1,67 @@
+.item1{grid-area:Membership;}
+.item2 { grid-area: Manager; }
+.item3 { grid-area: TrialSessions; }
+.item4 { grid-area: Reporting; }
+.item5{grid-area: Schedule;}
+.item6{grid-area: Levels;}
+.item7{grid-area: Billing;}
+.item8{grid-area: CustomBranding;}
+
+
+.grid-container {
+    
+  display: grid;
+  grid-template-areas:
+    'Membership Manager TrialSessions'
+    'Membership Reporting Schedule'
+    'Levels Billing CustomBranding'
+    ;
+   
+  gap: 10px;
+ background-color: black;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-radius: 10px;
+}
+@media screen and (min-width:501px) and (max-width:1000px){
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'Membership Manager'
+        'Membership TrialSessions'
+        'Reporting Schedule'
+        'Levels Billing'
+        'CustomBranding CustomBranding '
+        ;
+       
+      gap: 10px;
+     background-color: black;
+      padding: 10px;
+    }
+}
+@media screen and (max-width:500px){
+    .grid-container {
+        
+      display: grid;
+      grid-template-areas:
+        'Membership '
+        'Manager '
+        'TrialSessions'
+        'Reporting'
+        'Schedule'
+        'Levels'
+        'Billing'
+        'CustomBranding'
+        ;
+       
+      gap: 10px;
+     background-color: black;
+      padding: 10px;
+    }
+}
